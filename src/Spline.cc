@@ -72,6 +72,14 @@ double Spline::ArcLength(const unsigned int _index,
 }
 
 ///////////////////////////////////////////////////////////
+double Spline::CumulativeArcLength(const unsigned int _index) const
+{
+  if (_index >= this->dataPtr->cumulativeArcLengths.size())
+    return INF_D;
+  return this->dataPtr->cumulativeArcLengths[_index];
+}
+
+///////////////////////////////////////////////////////////
 void Spline::AddPoint(const Vector3d &_p)
 {
   this->AddPoint(

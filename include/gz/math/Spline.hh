@@ -67,6 +67,10 @@ namespace gz::math
     public: double ArcLength(const unsigned int _index,
                              const double _t) const;
 
+    /// \brief Gets spline cumulative arc length.
+    /// \return cumulative arc length or INF on error.
+    public: double CumulativeArcLength(const unsigned int _index) const;
+
     /// \brief Adds a single control point to the
     /// end of the spline.
     /// \param[in] _p control point value to add.
